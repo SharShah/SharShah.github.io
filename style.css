@@ -66,7 +66,7 @@ body {
   .desktop-nav a {
     text-decoration: none;
     color: #333;
-    font-weight: 500;
+    font-weight: 350;
     transition: color 0.3s;
   }
   
@@ -171,7 +171,7 @@ body {
     font-size: 1.8rem;
     color: #555;
     margin-bottom: 15px;
-    font-weight: 500;
+    font-weight: 350;
   }
   
   .hero-content p {
@@ -189,7 +189,7 @@ body {
     padding: 12px 25px;
     border-radius: 30px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 350;
     transition: all 0.3s;
   }
   
@@ -462,7 +462,7 @@ body {
     border-radius: 50%;
     padding: 1rem;
     text-align: center;
-    font-weight: 500;
+    font-weight: 350;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
@@ -662,7 +662,7 @@ summary.card-header::-webkit-details-marker {
 summary.card-header::after {
     content: '\f078';
     font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
+    font-weight: 500;
     position: absolute;
     right: 15px;
     color: #0066cc;
@@ -704,11 +704,11 @@ details[open] summary.card-header::after {
     font-size: 1rem;
     color: #333;
     margin-bottom: 5px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .institution {
-    font-weight: 500;
+    font-weight: 300;
     margin-bottom: 3px;
 }
 
@@ -783,8 +783,8 @@ details[open] summary.card-header::after {
 
 /* Experience Section Styles */
 #experience {
-    padding: 60px 5% 50px;
-    max-width: 1200px;
+    padding: 60px 3% 50px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
@@ -808,105 +808,79 @@ details[open] summary.card-header::after {
 .timeline {
     position: relative;
     margin-top: 50px;
+    padding-left: 0; /* Remove left padding */
+    width: 90%; /* Control the width of the timeline area */
+    margin: 0 auto; /* Center the timeline */
 }
 
 .timeline::before {
     content: '';
     position: absolute;
-    left: 50%; /* Center the timeline */
-    transform: translateX(-50%);
+    left: 20%; /* Position the line at 20% instead of far left */
     top: 0;
-    bottom: 0;
-    width: 3px;
-    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    height: 100%;
+    width: 2px;
+    background-color: #0088cc;
     opacity: 0.3;
-    z-index: 1; /* Ensure the line is above background elements */
+    z-index: 1;
 }
 
 .experience-card {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
-    margin-bottom: 50px;
+    display: flex;
+    margin-bottom: 60px;
     position: relative;
-    width: 45%; /* Limit width to make room for both sides */
-}
-
-
-/* Left side (odd items) */
-.experience-card:nth-child(odd) {
-    margin-left: 0;
-    margin-right: auto;
-    padding-right: 40px;
-}
-
-/* Right side (even items) */
-.experience-card:nth-child(even) {
-    margin-left: auto;
-    margin-right: 0;
-    padding-left: 40px;
+    margin-left: 22%; /* Align with the timeline */
+    width: 75%; /* Control width of content */
 }
 
 .experience-card::before {
     content: '';
     position: absolute;
+    left: -35px;
     top: 20px;
-    width: 13px;
-    height: 13px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
-    background: var(--primary-color);
+    background-color: #0088cc;
     border: 3px solid white;
-    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
-    z-index: 2; /* Ensure dots appear above the line */
-}
-
-/* Position dots for left side items */
-.experience-card:nth-child(odd)::before {
-    left: auto;
-    right: -50px; /* Increase this value */
-    transform: translateX(50%); /* This helps center the dot on the line */
-}
-
-/* Position dots for right side items */
-.experience-card:nth-child(even)::before {
-    left: -50px; /* Increase this value */
-    transform: translateX(-50%); /* This helps center the dot on the line */
+    box-shadow: 0 0 0 2px #0088cc;
+    z-index: 2;
 }
 
 .experience-logo {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 10px;
+    flex: 0 0 150px;
+    margin-right: 30px;
 }
 
 .experience-logo img {
-    max-width: 120px;
+    max-width: 100%;
     height: auto;
-    transition: transform 0.3s ease;
 }
 
 .experience-card:hover .experience-logo img {
     transform: scale(1.05);
 }
 
+.experience-content {
+    flex: 1;
+}
+
 .experience-content h3 {
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: #0088cc;
     margin-bottom: 5px;
 }
 
 .experience-content h4 {
     font-size: 1.2rem;
-    color: var(--text-color);
-    margin-bottom: 8px;
-    font-weight: 500;
+    color: #555;
+    margin-bottom: 10px;
 }
 
 .experience-content .date {
     display: inline-block;
-    background-color: #e6f3fa; /* Light blue background */
-    color: #0088cc; /* Blue text */
+    background-color: #e6f3fa;
+    color: #0088cc;
     padding: 5px 15px;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -947,24 +921,44 @@ details[open] summary.card-header::after {
 }
 
 @media (max-width: 768px) {
+
+    #experience h2 {
+        text-align: center;
+      }
+      
+      #experience h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+    .timeline {
+      padding-left: 30px; /* Ensure consistent padding */
+    }
+    
     .timeline::before {
-        left: 20px;
-        transform: none;
+      left: 7px; /* Keep the line consistently positioned */
     }
     
     .experience-card {
-        width: 90%;
-        margin-left: auto !important;
-        margin-right: 0 !important;
-        padding-left: 40px !important;
-        padding-right: 0 !important;
+      flex-direction: column; /* Stack elements vertically */
+      margin-left: 0.0px; /* Give some space from the timeline */
+      width: 85%; /* Control width to prevent overflow */
     }
     
     .experience-card::before {
-        left: -6.5px !important;
-        right: auto !important;
+      left: -30px; /* Keep dots aligned with the timeline */
     }
-}
+    
+    .experience-logo {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+    
+    .experience-content h3 {
+      font-size: 1.3rem; /* Slightly smaller font for mobile */
+    }
+  }  
+  
 
  /* Collapsible Styles */
 .collapsible {
@@ -1136,8 +1130,30 @@ details[open] summary.card-header::after {
 }
 
 @media (max-width: 768px) {
+    #projects h2 {
+        text-align: center;
+      }
+      
+      #projects h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
     .project-grid {
         grid-template-columns: 1fr;
+    }
+    .project-image {
+        height: auto; /* Allow height to adjust based on content */
+        max-height: 250px;
+    }
+    
+    .project-image img {
+        object-fit: contain;
+    }
+    
+    .project-card {
+        width: 100%;
+        overflow-x: hidden;
     }
 }
 
@@ -1192,7 +1208,7 @@ details[open] summary.card-header::after {
     border-radius: 2px;
 }
 
-.underline::after {
+/* .underline::after {
     content: "";
     position: absolute;
     width: 20px;
@@ -1200,7 +1216,7 @@ details[open] summary.card-header::after {
     background-color: #0066cc;
     right: -30px;
     border-radius: 2px;
-}
+} */
 
 /* Improved grid layout */
 .about-container {
@@ -1428,15 +1444,25 @@ details[open] summary.card-header::after {
     
     /* Typography adjustments */
     #about h2 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-      text-align: center;
+        font-size: 2rem;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 100%; /* Ensure full width */
+        display: block;
     }
     
     .underline {
-      margin: 0 auto 25px;
+        margin: 0 auto 25px;
+        display: block
     }
+
+    /* Fix the underline::after position for mobile */
+  .underline::after {
+    right: -30px;
+    display: none; /* Hide the small line on mobile for cleaner look */
   }
+  }
+  
   
 
 /* Skills Section Styles */
@@ -1447,22 +1473,35 @@ details[open] summary.card-header::after {
 }
 
 .skills-header {
-    text-align: center;
+    text-align: left !important;
     margin-bottom: 50px;
 }
 
 .skills-header h2 {
     font-size: 2.8rem;
-    font-weight: 700;
+    font-weight: 500;
     color: #333;
     margin-bottom: 15px;
+    text-align: left !important;
+    margin-left: 0;
+    left: 0;
+    display: block; /* Ensure block display */
+    width: 100%; /* Take full width */
 }
+
+#skills h2::after {
+    left: 42px;
+    width: 80px;
+     }
+  
 
 .skills-header .underline {
     height: 4px;
     width: 120px;
     background: linear-gradient(to right, #0066cc, #00aaff);
-    margin: 0 auto;
+    margin: 0; /* Left align the underline */
+    display: block; /* Ensure block display */
+
 }
 
 .skills-category {
@@ -1473,7 +1512,7 @@ details[open] summary.card-header::after {
     font-size: 1.8rem;
     color: #0066cc;
     margin-bottom: 30px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .skill-grid {
@@ -1510,7 +1549,7 @@ details[open] summary.card-header::after {
 .skill-card h4 {
     font-size: 1.2rem;
     color: #333;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .skill-level, .skill-bar {
@@ -1527,7 +1566,7 @@ details[open] summary.card-header::after {
     font-size: 1.8rem;
     color: #0066cc;
     margin-bottom: 30px;
-    font-weight: 600;
+    font-weight: 400;
 }
 .cert-card i {
     margin-right: 20px;
@@ -1562,7 +1601,7 @@ details[open] summary.card-header::after {
 .cert-card h4 {
     font-size: 1.1rem;
     color: #333;
-    font-weight: 500;
+    font-weight: 350;
 }
 
 @media (max-width: 768px) {
@@ -1572,6 +1611,23 @@ details[open] summary.card-header::after {
     
     .cert-container {
         grid-template-columns: 1fr;
+    }
+
+    .skills-header {
+        text-align: center !important;
+      }
+      
+      .skills-header h2 {
+        text-align: center !important;
+      }
+      
+      .skills-header .underline {
+        margin: 0 auto;
+      }
+    
+    #skills h2::after {
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 .cert-info {
