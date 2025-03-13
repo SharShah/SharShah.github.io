@@ -23,7 +23,6 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
-    font-weight: 300; /* Lighter base font weight */
 }
 
 /* Cursor Follower
@@ -48,16 +47,7 @@ body {
     padding: 20px 5%;
     background-color: white;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    font-weight: 400;
 }
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 400; /* Reduce heading boldness */
-  }
-  
-  p, li, span {
-    font-weight: 300; /* Ensure paragraph text is light */
-  }
 
   .logo {
     font-size: 2rem;
@@ -75,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
   .desktop-nav a {
     text-decoration: none;
     color: #333;
-    font-weight: 350;
+    font-weight: 500;
     transition: color 0.3s;
   }
   
@@ -180,7 +170,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.8rem;
     color: #555;
     margin-bottom: 15px;
-    font-weight: 200;
+    font-weight: 500;
   }
   
   .hero-content p {
@@ -198,7 +188,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 12px 25px;
     border-radius: 30px;
     text-decoration: none;
-    font-weight: 200;
+    font-weight: 500;
     transition: all 0.3s;
   }
   
@@ -471,7 +461,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 50%;
     padding: 1rem;
     text-align: center;
-    font-weight: 200;
+    font-weight: 500;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
@@ -616,7 +606,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
-    font-weight: 200;
+    font-weight: 500;
     transition: background-color 0.3s ease;
 }
 
@@ -712,11 +702,11 @@ summary.card-header::after {
     font-size: 1rem;
     color: #333;
     margin-bottom: 5px;
-    font-weight: 200;
+    font-weight: 600;
 }
 
 .institution {
-    font-weight: 200;
+    font-weight: 500;
     margin-bottom: 3px;
 }
 
@@ -913,7 +903,7 @@ summary.card-header::after {
     left: 0;
     color: var(--primary-color);
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: bold;
 }
 
 /* Add expand button */
@@ -996,7 +986,7 @@ summary.card-header::after {
 .collapsible:after {
     content: '\002B';
     color: var(--primary-color);
-    font-weight: 300;
+    font-weight: bold;
     float: right;
     margin-left: 5px;
 }
@@ -1117,7 +1107,7 @@ summary.card-header::after {
     left: 0;
     color: var(--primary-color);
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: bold;
 }
 
 .project-links {
@@ -1487,7 +1477,7 @@ summary.card-header::after {
 
 .skills-header h2 {
     font-size: 2.8rem;
-    font-weight: 400;
+    font-weight: bold;
     color: #333;
     margin-bottom: 15px;
     text-align: left !important;
@@ -1520,7 +1510,7 @@ summary.card-header::after {
     font-size: 1.8rem;
     color: #0066cc;
     margin-bottom: 30px;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .skill-grid {
@@ -1557,7 +1547,7 @@ summary.card-header::after {
 .skill-card h4 {
     font-size: 1.2rem;
     color: #333;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .skill-level, .skill-bar {
@@ -1574,7 +1564,7 @@ summary.card-header::after {
     font-size: 1.8rem;
     color: #0066cc;
     margin-bottom: 30px;
-    font-weight: 400;
+    font-weight: 600;
 }
 .cert-card i {
     margin-right: 20px;
@@ -1609,7 +1599,7 @@ summary.card-header::after {
 .cert-card h4 {
     font-size: 1.1rem;
     color: #333;
-    font-weight: 200;
+    font-weight: 500;
 }
 
 @media (max-width: 768px) {
