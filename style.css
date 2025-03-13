@@ -23,6 +23,7 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
+    font-weight: 300; /* Lighter base font weight */
 }
 
 /* Cursor Follower
@@ -47,9 +48,17 @@ body {
     padding: 20px 5%;
     background-color: white;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    font-weight: 400;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400; /* Reduce heading boldness */
+  }
   
+  p, li, span {
+    font-weight: 300; /* Ensure paragraph text is light */
+  }
+
   .logo {
     font-size: 2rem;
     font-weight: bold;
@@ -171,7 +180,7 @@ body {
     font-size: 1.8rem;
     color: #555;
     margin-bottom: 15px;
-    font-weight: 350;
+    font-weight: 200;
   }
   
   .hero-content p {
@@ -189,7 +198,7 @@ body {
     padding: 12px 25px;
     border-radius: 30px;
     text-decoration: none;
-    font-weight: 350;
+    font-weight: 200;
     transition: all 0.3s;
   }
   
@@ -462,7 +471,7 @@ body {
     border-radius: 50%;
     padding: 1rem;
     text-align: center;
-    font-weight: 350;
+    font-weight: 200;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
@@ -607,7 +616,7 @@ body {
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 200;
     transition: background-color 0.3s ease;
 }
 
@@ -660,18 +669,17 @@ summary.card-header::-webkit-details-marker {
 }
 
 summary.card-header::after {
-    content: '\f078';
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 500;
+    content: '▼';
     position: absolute;
     right: 15px;
     color: #0066cc;
     transition: transform 0.3s ease;
-}
-
-details[open] summary.card-header::after {
+    font-size: 0.8rem;
+  }
+  
+  details[open] summary.card-header::after {
     transform: rotate(180deg);
-}
+  }
 
 .card-header i {
     color: #0066cc;
@@ -704,11 +712,11 @@ details[open] summary.card-header::after {
     font-size: 1rem;
     color: #333;
     margin-bottom: 5px;
-    font-weight: 400;
+    font-weight: 200;
 }
 
 .institution {
-    font-weight: 300;
+    font-weight: 200;
     margin-bottom: 3px;
 }
 
@@ -905,7 +913,7 @@ details[open] summary.card-header::after {
     left: 0;
     color: var(--primary-color);
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: 300;
 }
 
 /* Add expand button */
@@ -988,7 +996,7 @@ details[open] summary.card-header::after {
 .collapsible:after {
     content: '\002B';
     color: var(--primary-color);
-    font-weight: bold;
+    font-weight: 300;
     float: right;
     margin-left: 5px;
 }
@@ -1109,7 +1117,7 @@ details[open] summary.card-header::after {
     left: 0;
     color: var(--primary-color);
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: 300;
 }
 
 .project-links {
@@ -1479,7 +1487,7 @@ details[open] summary.card-header::after {
 
 .skills-header h2 {
     font-size: 2.8rem;
-    font-weight: 500;
+    font-weight: 400;
     color: #333;
     margin-bottom: 15px;
     text-align: left !important;
@@ -1601,7 +1609,7 @@ details[open] summary.card-header::after {
 .cert-card h4 {
     font-size: 1.1rem;
     color: #333;
-    font-weight: 350;
+    font-weight: 200;
 }
 
 @media (max-width: 768px) {
