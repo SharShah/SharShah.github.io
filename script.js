@@ -66,17 +66,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenu = document.querySelector('.mobile-menu');
     
     hamburgerBtn.addEventListener('click', function() {
-      mobileMenu.classList.toggle('active');
-      document.body.classList.toggle('no-scroll');
+        console.log('Menu toggled');
+        mobileMenu.classList.toggle('active');
     });
-    
-    // Close menu when clicking a link
-    const mobileLinks = document.querySelectorAll('.mobile-menu a');
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        mobileMenu.classList.remove('active');
-        document.body.classList.remove('no-scroll');
-      });
-    });
-  });
+});
+
 
